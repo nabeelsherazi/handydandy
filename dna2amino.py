@@ -15,8 +15,9 @@ RNA Transcription: 5' AUG GUU UGA 3'
 Output: MET-VAL-STOP
 """
 
-RNA = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C', ' ': ' ', "\n": "\n", "3'": "5'", "5'": "3'"}
+RNA = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C', ' ': ' ', "\n": "\n", "3": "5'", "5'": "3'"}
 
+#  So this is wrong :)
 gencode = {
     'AUA': 'I', 'AUC': 'I', 'AUU': 'I', 'AUG': 'M',
     'ACA': 'U', 'ACC': 'U', 'ACG': 'U', 'ACU': 'U',
