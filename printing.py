@@ -12,6 +12,7 @@ METHODS/CLASS:
 Printer.start_job - Starts a new print job. Returns job ID
 Printer.write - Write a string to the print spool. Returns number of bytes added.
 Printer.send_job - Send the job to be printer. Returns total number of bytes sent to print.
+Printer.quit_job - Quits current job. Must be done before starting a new job to avoid error.
 Printer.print_file - Creates job and sends a text file to be printed. Returns tuple of job
 ID and total number of bytes printed.
 
@@ -52,6 +53,10 @@ class Printer:
         win32print.EndPagePrinter(self.printer)
         win32print.EndDocPrinter(self.printer)
         return self.total_bytes
+
+    def quit_job(self):
+        """Quits current job. Must be done before starting a new job to avoid error."""
+        win32print.AbortPrinter(self.printer)
 
     @staticmethod
     def get_printers():
