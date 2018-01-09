@@ -11,3 +11,7 @@ sms - a class for an sms system inside of a phone
 testsuite - a class for testing python code when you don't know how to use unittest, pytest, etc
 
 make_all_lined - a script to batch create line numbered versions of all text files in your working directory
+
+decorators - library of decorators i wrote that i use a lot
+
+printing - library to simplify (physically) printing text with python
