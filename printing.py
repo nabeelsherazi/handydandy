@@ -24,6 +24,8 @@ Email at sherazi.n@husky.neu.edu
 """
 
 import win32print
+import sys
+import os
 
 
 class Printer:
@@ -79,3 +81,15 @@ class Printer:
                         end += 80
             self.send_job
         return (self.job, self.total_bytes)
+
+
+if __name__ == "__main__":
+    printer = Printer()
+    if sys.argv[1]:
+        try:
+            job = printer.print_file(sys.argv[1])
+        except FileNotFoundError:
+            print("Error: Requested file to print not found.")
+        else:
+            print("Started print job with ID:", job[0])
+            print("Total size:", job[1], "bytes.")
