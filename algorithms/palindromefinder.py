@@ -1,7 +1,6 @@
 # String: TCTAGGGGGGATCCCCCTAGATCTAGGGGGATCCCCCCTAGA
 import math
 
-
 def get_substrings(string):
     for start_index in range(len(string)):
         for end_index in range(len(string), start_index, -1):
